@@ -39,11 +39,9 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin: 1rem;
-}
-
-.slide > div > * {
-    text-shadow: 0 0 4px black;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #1f1f1faa;
 }
 
 .thumbs-wrapper {
