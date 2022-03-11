@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#container',
     data: {
         activeIndex: 0,
+        clock: '',
         arrSlides: [
             {
                 img: 'img/01.jpg',
@@ -45,5 +46,14 @@ const app = new Vue({
                 this.activeIndex++;
             }
         },
+        autoSlides() {
+            this.clock = setInterval(this.nextImg, 1000)
+        },
+        stopSlides() {
+            clearInterval(this.clock);
+        },
+    },
+    created(){
+        this.autoSlides();
     }
 });

@@ -16,7 +16,7 @@
 
     <div id="container">
 
-        <div class="slide">
+        <div class="slide" @mouseover="stopSlides" @mouseleave="autoSlides">
             <div>
                 <h2>{{ arrSlides[activeIndex].title }}</h2>
                 <p>{{ arrSlides[activeIndex].text }}</p>
