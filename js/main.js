@@ -21,7 +21,7 @@ const app = new Vue({
             }
         },
         autoSlides() {
-            this.clock = setInterval(this.nextImg, 1000)
+            this.clock = setInterval(this.nextImg, 3000)
         },
         stopSlides() {
             clearInterval(this.clock);
