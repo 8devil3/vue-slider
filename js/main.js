@@ -27,9 +27,9 @@ const app = new Vue({
             clearInterval(this.clock);
         },
         getData() {
-            for (let i = 0; i < items.length; i++) {
-                this.arrSlides.push({img:items[i], title:title[i], text:text[i]});
-            }
+            items.forEach((itm, indx) => {
+                this.arrSlides.push({img:items[indx], title:title[indx], text:text[indx]});
+            });
         }
     },
     created(){
