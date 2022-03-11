@@ -6,33 +6,33 @@ const app = new Vue({
         clock: '',
     },
     methods: {
-        prevImg() {
+        prevImg() { // immagine precedente
             if (this.activeIndex == 0) {
                 this.activeIndex = this.arrSlides.length - 1;
             } else {
                 this.activeIndex--;
             }
         },
-        nextImg() {
+        nextImg() { // immagine successiva
             if (this.activeIndex == this.arrSlides.length - 1) {
                 this.activeIndex = 0;
             } else {
                 this.activeIndex++;
             }
         },
-        autoSlides() {
+        autoSlides() { // carosello slides ogni 3 sec
             this.clock = setInterval(this.nextImg, 3000)
         },
-        stopSlides() {
+        stopSlides() { // fermo le slides
             clearInterval(this.clock);
         },
-        getData() {
+        getData() { // ricavo i dati dagli array di parteza. Prima ho appurato (manualmente) che i tre array di partenza abbiano la stessa length, altrimenti riceverei campi vuoti
             items.forEach((itm, indx) => {
                 this.arrSlides.push({img:items[indx], title:title[indx], text:text[indx]});
             });
         }
     },
-    created(){
+    created(){ // start dell'acquisizione dei dati e della partenza del carosello
         this.getData();
         this.autoSlides();
     }
