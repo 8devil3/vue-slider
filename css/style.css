@@ -85,6 +85,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 2px 2px #0000004d;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #f80;
 }
 
 .btn-up {
