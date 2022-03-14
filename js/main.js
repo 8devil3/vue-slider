@@ -1,5 +1,5 @@
 const app = new Vue({
-    el: '#container',
+    el: '#root',
     data: {
         activeIndex: 0,
         arrSlides: [],
@@ -26,6 +26,9 @@ const app = new Vue({
         },
         stopSlides() { // fermo le slides
             clearInterval(this.clock);
+        },
+        setActiveIndex(index) { // click sui pallini
+            this.activeIndex = index;
         },
         getData() { // ricavo i dati dagli array di parteza. Prima ho appurato (manualmente) che i tre array di partenza abbiano la stessa length, altrimenti riceverei campi vuoti
             items.forEach((itm, indx) => {
