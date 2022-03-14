@@ -33,8 +33,10 @@ const app = new Vue({
             });
         }
     },
-    created(){ // start dell'acquisizione dei dati e della partenza del carosello
+    created(){ // start dell'acquisizione dei dati
         this.getData();
+    },
+    mounted() { // partenza del carosello
         this.autoSlides();
     }
 });
