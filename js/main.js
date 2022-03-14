@@ -3,7 +3,8 @@ const app = new Vue({
     data: {
         activeIndex: 0,
         arrSlides: [],
-        clock: '',
+        clock: null,
+        intervalloSlider: 1000,
     },
     methods: {
         prevImg() { // immagine precedente
@@ -21,7 +22,7 @@ const app = new Vue({
             }
         },
         autoSlides() { // carosello slides ogni 3 sec
-            this.clock = setInterval(this.nextImg, 3000)
+            this.clock = setInterval(this.nextImg, this.intervalloSlider)
         },
         stopSlides() { // fermo le slides
             clearInterval(this.clock);
